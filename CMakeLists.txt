@@ -62,3 +62,6 @@ find_package(SDL3 REQUIRED)
 find_package(SDL3_mixer REQUIRED)
 
 # If we're here, then we can start grabbing actual engine files and start compiling!
+
+file(GLOB ENGINE_SRC CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/src/*.cpp")
+file(GLOB ENGINE_INCLUDE CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/include/*.hpp")
