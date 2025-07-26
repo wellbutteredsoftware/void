@@ -50,7 +50,8 @@ if [ ! -d external/sdl3_mixer ]; then
         -DBUILD_SHARED_LIBS=OFF \
         -DSDL_mixer_TESTS=OFF \
         -DSDL_mixer_SDL2_REQUIRED=OFF \
-        -DSDL_mixer_SDL3_REQUIRED=ON
+        -DSDL_mixer_SDL3_REQUIRED=ON \
+        -DCMAKE_INSTALL_PREFIX=../install
 
     cmake --build build -- -j"$(nproc)"
     cmake --install build
