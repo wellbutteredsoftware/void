@@ -1,4 +1,5 @@
 # Void Engine
+<!-- in cmd: call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x64 -->
 
 ![Static Badge](https://img.shields.io/badge/Built_with-C++-blue?logo=cplusplus)
 [![justforfunnoreally.dev badge](https://img.shields.io/badge/justforfunnoreally-dev-9ff)](https://justforfunnoreally.dev)

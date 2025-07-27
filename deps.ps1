@@ -63,15 +63,5 @@ if (-not (Test-Path -Path "external/sdl3_mixer" -PathType Container)) {
     Pop-Location
 }
 
-$stbPath = "external/install/stb/stb_vorbis.c"
-if (-not (Test-Path -Path $stbPath)) {
-    if (-not (Test-Path -Path "external/install/stb" -PathType Container)) {
-        New-Item -Path "external/install/stb" -ItemType Directory | Out-Null
-    }
-
-    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/nothings/stb/refs/heads/master/stb_vorbis.c" `
-                      -OutFile $stbPath
-}
-
 Write-Host "Dependencies built!"
 exit 0
