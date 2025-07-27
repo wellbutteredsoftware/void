@@ -11,11 +11,6 @@ if ! command git -v >/dev/null 2>&1; then
     exit 1
 fi
 
-if ! command make --version >/dev/null 2>&1; then
-    echo "Fatal: make is missing!" >&2
-    exit 1
-fi
-
 if ! command ninja --version >/dev/null 2>&1; then
     echo "Fatal: ninja is missing!" >&2
     exit 1
@@ -51,6 +46,7 @@ if [ ! -d external/sdl3_mixer ]; then
         -DSDL_mixer_TESTS=OFF \
         -DSDL_mixer_SDL2_REQUIRED=OFF \
         -DSDL_mixer_SDL3_REQUIRED=ON \
+        -DSDLMIXER_VENDORED=OFF \
         -DCMAKE_INSTALL_PREFIX=../install
 
     cmake --build build -- -j"$(nproc)"

@@ -10,7 +10,11 @@ Void is a passion project that has only a couple goals, to be an easy-to-use but
 # Features
 
 - 2D Rendering via SDL3
-- WAV Audio processing with SDL_Mixer
+- Audio processing with SDL_Mixer
+- Supported Formats:
+    * OGG
+    * WAV
+    * FLAC
 
 # Targets
 
