@@ -4,10 +4,8 @@
  * Licensed under Apache-2.0
  * 
  * Audio backend, handled by SDL3_mixer under the branch `sdl2-api-on-sdl3`.
- * Right now only .WAV audio files are supported and are recommended to use.
- * Future support for .OGG files is in the works!
- * 
- * Support for other formats like FLAC and MPEG-3 may be considered.
+ * Currently, Ogg, FLAC, and WAV are supported. MID/MIDI has partial support
+ * (See SDL3_mixer docs)
  */
 #pragma once
 
