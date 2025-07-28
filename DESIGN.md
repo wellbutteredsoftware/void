@@ -11,6 +11,15 @@ The document is organized to reflect the major subsystems of the engine, with ex
 0. [Forward](#forward)
 1. [Table of Contents](#table-of-contents)
 2. [VGraphics and SDL3](#2-vgraphics-and-sdl3)
+    - 2.1. [VGraphics::Init()](#21-vgraphicsinit)
+    - 2.2. [VGraphics::Destroy()](#22-vgraphicsdestroy)
+    - 2.3. [VGraphics::BeginFrame()](#23-vgraphicsbeginfame)
+    - 2.4. [VGraphics::EndFrame()](#24-vgraphicsendframe)
+    - 2.5. [VGraphics::Clear()](#25-vgraphicsclear)
+    - 2.6. [VGraphics::DrawTexture()](#26-vgraphicsdrawtexture)
+    - 2.7. [VGraphics::SetWindowTitle()](#27-vgraphicssetwindowtitle)
+    - 2.8. [VGraphics::SetFullscreen()](#28-vgraphicssetfullscreen)
+    - 2.9. [VGraphics::Resize()](#29-vgraphicsresize)
 
 ## 2. VGraphics and SDL3
 
@@ -18,7 +27,7 @@ The document is organized to reflect the major subsystems of the engine, with ex
 
 Internally it wraps both an `SDL_Window*` and `SDL_Renderer*`, managing their lifecycle, framebuffer clearing, and common operations like rendering textures and window resizing.
 
-VGraphics is not designed to be fully feature-complete in itself--it is a stable internal interface between SDL and the engine, with a fixed set of responsibilities and contracts:
+VGraphics is not designed to be fully feature-complete in itself--it is a stable internal interface between SDL and the engine, with a fixed set of responsibilities:
 
 ### Responsibilities
 - Initialize and destroy the SDL window and renderer
@@ -69,6 +78,6 @@ int main(int argc, char* argv[]) {
 
 ## 2.8. VGraphics::SetFullscreen()
 
-## 2.9. VGraphics::Resize
+## 2.9. VGraphics::Resize()
 
 # Void Engine C APIs (for non C++ projects)

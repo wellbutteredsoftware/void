@@ -11,6 +11,7 @@ VGraphics::~VGraphics() {
 
 bool VGraphics::Init() {
     if (initalized) return true;
+    initalized = false;
 
     Uint32 window_flags = SDL_WINDOW_RESIZABLE;
     if (is_fullscreen)
@@ -20,7 +21,7 @@ bool VGraphics::Init() {
         window_flags, &window, &renderer) != 0)
     {
         std::cerr << "SDL_CreateWindowAndRenderer() failed: " << SDL_GetError() << "\n";
-        return false;
+        return initalized;
     }
 
     initalized = true;

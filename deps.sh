@@ -54,10 +54,5 @@ if [ ! -d external/sdl3_mixer ]; then
     cd ../..
 fi
 
-if [ ! -d external/install/stb ]; then
-    mkdir -p external/install/stb
-    curl -Lo external/install/stb/stb_vorbis.c https://raw.githubusercontent.com/nothings/stb/refs/heads/master/stb_vorbis.c
-fi
-
 echo "Dependencies built!"
 exit 0

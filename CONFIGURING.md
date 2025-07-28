@@ -46,3 +46,5 @@ This is the list of every single switch and flag you can pass into CMake for thi
 | `-DCMAKE_CXX_COMPILER` | Specify the C++ compiler you'd like to use. |
 | `-DBUILD_SHARED_LIBS` | Specify if the engine will be built as a static or dynamic library. |
 | `-DPURGE_DEPS` | Deletes and recompiles **every** dependency for Void. |
+| `-DPEDANTIC_COMPILING` | Enables highest warning levels on selected compiler. |
+| `-DWARNINGS_ARE_ERRORS` | Every warning is an error and will stop compilation. |
